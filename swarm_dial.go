@@ -435,6 +435,7 @@ func (s *Swarm) dial(ctx context.Context, p peer.ID) (*Conn, error) {
 // and addresses that we know to be our own.
 // This is an optimization to avoid wasting time on dials that we know are going to fail.
 func (s *Swarm) filterKnownUndialables(p peer.ID, addrs []ma.Multiaddr) []ma.Multiaddr {
+	fmt.Println("DEBUG: filterKnownUndialables")
 	lisAddrs, _ := s.InterfaceListenAddresses()
 	var ourAddrs []ma.Multiaddr
 	for _, addr := range lisAddrs {
