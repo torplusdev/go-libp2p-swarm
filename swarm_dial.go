@@ -69,7 +69,7 @@ const ConcurrentFdDials = 160
 
 // DefaultPerPeerRateLimit is the number of concurrent outbound dials to make
 // per peer
-const DefaultPerPeerRateLimit = 8
+const DefaultPerPeerRateLimit = 4
 
 // dialbackoff is a struct used to avoid over-dialing the same, dead peers.
 // Whenever we totally time out on a peer (all three attempts), we add them
